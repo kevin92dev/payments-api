@@ -7,10 +7,10 @@ Email: kevin92dev@gmail.com
 Copyright 2018
 """
 
-from flask.ext.login import LoginManager
-from flask.ext.login import login_user as god_login, logout_user as god_logout
-from flask.ext.login import login_required as flask_login_required
-import flask.ext.login
+from flask_login import LoginManager
+from flask_login import login_user as god_login, logout_user as god_logout
+from flask_login import login_required as flask_login_required
+import flask_login
 
 
 class AuthenticationService(object):
@@ -31,7 +31,8 @@ class AuthenticationService(object):
 
     def get_current_user(self):
         return self.user_repository.get_by_username(
-            flask.ext.login.current_user.username)
+            flask_login.current_user.username
+        )
 
     def login_required(self, callable):
         return flask_login_required(callable)

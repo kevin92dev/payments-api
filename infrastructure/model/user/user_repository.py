@@ -17,6 +17,6 @@ class UserRepository(RepositoryBase):
 
     def get_by_username(self, username):
         try:
-            return self.session().query(User).filter_by(username=username).one()
+            return self.session().query(User).filter_by(username=username).first()
         except Exception:
             return None

@@ -10,8 +10,7 @@ Copyright 2018
 
 class BankAccount(object):
 
-    def __init__(self, id, user, iban, balance):
+    def __init__(self, id, iban, balance):
         self.id = id
-        self.user = user
         self.iban = iban
         self.balance = balance

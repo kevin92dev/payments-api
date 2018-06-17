@@ -7,12 +7,13 @@ Email: kevin92dev@gmail.com
 Copyright 2018
 """
 
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from infrastructure.persistence.mapping import mapping
 from infrastructure.model.user.user_repository import UserRepository
 from infrastructure.model.bank_account.bank_account_repository \
     import BankAccountRepository
 from application.service.authentication_service import AuthenticationService
+from application.service.transfer_service import TransferService
 
 
 class SQLContext(object):
@@ -27,6 +28,7 @@ class SQLContext(object):
         self.bank_account_repository = BankAccountRepository(app, db)
         self.authentication_service = \
             AuthenticationService(app, self.user_repository)
+        self.transfer_service = TransferService(db)
 
     def setup(self):
         self.db.create_all()
