@@ -1,0 +1,10 @@
+{
+	"firstname": "Kevin",
+	"lastname": "Murillo Fernández",
+	"username": "kevin92dev",
+	"password": "123456",
+	"bank_account": {
+		"iban": "ES00000000000000",
+		"balance": 3000
+	}
+}

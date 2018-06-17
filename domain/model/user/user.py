@@ -48,4 +48,4 @@ class User(object):
         return False
 
     def get_id(self):
-        return self.username
+        return self.id

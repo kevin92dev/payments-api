@@ -1,4 +1,18 @@
-# SIGNUP
+# Instructions
+
+1- Clone this repository: ```git clone https://github.com/kevin92dev/payments-api.git```
+
+2- Install needed dependencies using: ```pip3 install -r requirements.txt```
+
+3- Activate virtualenv: ```source venv/activate```
+
+4- Run Flask server: ```FLASK_APP=infrastructure/app.py flask run```
+
+Now our app is running.
+
+
+## Example cURL API calls:
+### Signup
 
 ```
 curl -X POST \
@@ -17,7 +31,7 @@ curl -X POST \
 ```
 
 
-# LOGIN
+### Login
 
 ```
 curl -X POST \
@@ -29,13 +43,13 @@ curl -X POST \
 }'
 ```
 
-# LOGOUT
+### Logout
 
 ```
 curl -X GET http://127.0.0.1:5000/logout
 ```
 
-# MY BALANCE
+### My balance
 
 ```
 curl -X GET \
@@ -47,7 +61,7 @@ curl -X GET \
 }'
 ```
 
-# TRANSFER
+### Transfer
 
 ```
 curl -X POST \
